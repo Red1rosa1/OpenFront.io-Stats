@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/statsleaderboard.css">
+
+    <title>OpenFront.io Statistics System</title>
+</head>
+<body>
+    <header>
+        <h1>OpenFront.io Stats</h1>
+    </header>
+    <nav>
+        <div class="header__search">
+            <form action="javascript:void(0);">
+                <input id="searchbar" onkeyup="searchStructures()" type="text" name="search" placeholder="Seach..." />
+                <button type="submit"><i class="material-icons">search</i></button>
+            </form>
+        </div>
+    </nav>
+    <nav>
+        <div class="scroll-container">
+            <button class="nav-button prev">&#10094;</button>
+            <div class="scrollmenu">
+                <a href="../index.html">Home</a>
+                <a href="../playerstats.html">Your Stats</a>
+                <a href="#C3">Most Wins</a>
+                <a href="#C3">Most Losses</a>
+                <a href="#C3">Highest W/D</a>
+                <a href="#C3">Most Alliances Formed</a>
+                <a href="#C3">Most Alliances Broken</a>
+                <a href="#C3">Top Player Conquerer</a>
+                <a href="#C3">Most Land Captured</a>
+                <a href="#C3">Most Gold Earned</a>
+                <a href="#C3">Longest Playtime</a>
+                <a href="#C3">Most Ships Captured</a>
+                <a href="#C3">Most Cities Constructed</a>
+                <a href="#C3">Most Ports Established</a>
+                <a href="#C3">Most Defense Posts Built</a>
+                <a href="#C3">Most Missile Silos Constructed</a>
+                <a href="#C3">Most Warships Created</a>
+                <a href="#C3">Most Nuclear Strikes</a>
+            </div>
+            <button class="nav-button next">&#10095;</button>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="leaderboard-container">
+            <h2>Most Warships Built - Top Ranking</h2>
+            <table class="leaderboard-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Player</th>
+                        <th>Warships Built</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard">
+                    <!-- Leaderboard data will be populated here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+        <!-- Footer Section -->
+        <footer class="footer">
+            <p>&copy; 2025 OpenFront.</p>
+            <p><a href="#">OpenFront.io</a> | <a href="#">Discord</a></p>
+        </footer>
+
+        <script>
+            function searchStructures() {
+    const searchValue = document.getElementById('searchbar').value.trim().toLowerCase();
+    const structureItems = document.querySelectorAll('.structure-item');
+    let resultsFound = false;
+
+    structureItems.forEach((item) => {
+        const title = item.querySelector('h4').innerText.toLowerCase();
+
+        // Check if the title matches the search value
+        if (title.includes(searchValue)) {
+            item.style.display = 'block';
+            resultsFound = true;
+        } else {
+            item.style.display = 'none';
+        }
+    });
+
+    // Show/hide "No results" message
+    const noResultsElement = document.getElementById('noResults');
+    if (noResultsElement) {
+        noResultsElement.style.display = resultsFound ? 'none' : 'block';
+    }
+} 
+
+// Optional: Add an event listener to trigger the search on input
+const searchBar = document.getElementById('searchbar');
+if (searchBar) {
+    searchBar.addEventListener('input', searchStructures);
+} 
+
+        </script>
+
+<script>
+    const scrollMenu = document.querySelector(".scrollmenu");
+    const prevButton = document.querySelector(".prev");
+    const nextButton = document.querySelector(".next");
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    let velocity = 0;
+    let momentumID;
+
+    function startDragging(e) {
+        isDown = true;
+        startX = e.pageX || e.touches[0].pageX;
+        scrollLeft = scrollMenu.scrollLeft;
+        velocity = 0;
+        cancelMomentumTracking();
+    }
+
+    function stopDragging() {
+        isDown = false;
+        beginMomentumTracking();
+    }
+
+    function moveDragging(e) {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX || e.touches[0].pageX;
+        const walk = (x - startX) * 1.5;
+        scrollMenu.scrollLeft = scrollLeft - walk;
+        velocity = (scrollMenu.scrollLeft - scrollLeft) * 0.2;
+    }
+
+    function beginMomentumTracking() {
+        cancelMomentumTracking();
+        momentumID = requestAnimationFrame(momentumLoop);
+    }
+
+    function cancelMomentumTracking() {
+        cancelAnimationFrame(momentumID);
+    }
+
+    function momentumLoop() {
+        scrollMenu.scrollLeft += velocity;
+        velocity *= 0.9;
+        if (Math.abs(velocity) > 0.1) {
+            momentumID = requestAnimationFrame(momentumLoop);
+        }
+    }
+
+    scrollMenu.addEventListener("mousedown", startDragging);
+    scrollMenu.addEventListener("mouseleave", stopDragging);
+    scrollMenu.addEventListener("mouseup", stopDragging);
+    scrollMenu.addEventListener("mousemove", moveDragging);
+
+    scrollMenu.addEventListener("touchstart", startDragging);
+    scrollMenu.addEventListener("touchend", stopDragging);
+    scrollMenu.addEventListener("touchmove", moveDragging);
+
+    prevButton.addEventListener("click", () => {
+        scrollMenu.scrollBy({ left: -200, behavior: 'smooth' });
+    });
+
+    nextButton.addEventListener("click", () => {
+        scrollMenu.scrollBy({ left: 200, behavior: 'smooth' });
+    });
+</script>
+<script>
+    // Sample leaderboard data for "Most Warships Built"
+const leaderboardData = [
+    { rank: 1, player: "Player1", warshipsBuilt: 50 },
+    { rank: 2, player: "Player2", warshipsBuilt: 40 },
+    { rank: 3, player: "Player3", warshipsBuilt: 35 },
+    { rank: 4, player: "Player4", warshipsBuilt: 30 },
+    { rank: 5, player: "Player5", warshipsBuilt: 25 },
+    { rank: 6, player: "Player6", warshipsBuilt: 20 },
+    { rank: 7, player: "Player7", warshipsBuilt: 15 },
+    { rank: 8, player: "Player8", warshipsBuilt: 10 },
+    { rank: 9, player: "Player9", warshipsBuilt: 5 },
+    { rank: 10, player: "Player10", warshipsBuilt: 3 }
+];
+
+// Function to render the leaderboard
+function renderLeaderboard() {
+    const leaderboardElement = document.getElementById("leaderboard");
+    leaderboardElement.innerHTML = ""; // Clear existing leaderboard
+
+    leaderboardData.forEach((entry) => {
+        const row = document.createElement("tr");
+
+        const rankCell = document.createElement("td");
+        rankCell.textContent = entry.rank;
+        row.appendChild(rankCell);
+
+        const playerCell = document.createElement("td");
+        playerCell.textContent = entry.player;
+        row.appendChild(playerCell);
+
+        const warshipsBuiltCell = document.createElement("td");
+        warshipsBuiltCell.textContent = entry.warshipsBuilt;
+        row.appendChild(warshipsBuiltCell);
+
+        leaderboardElement.appendChild(row);
+    });
+}
+
+// Initialize leaderboard
+renderLeaderboard();
+
+</script>
+</body>
+</html>
