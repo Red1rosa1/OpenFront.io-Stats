@@ -19,6 +19,32 @@
             </form>
         </div>
     </nav>
+    <nav>
+        <div class="scroll-container">
+            <button class="nav-button prev">&#10094;</button>
+            <div class="scrollmenu">
+                <a href="../index.html">Home</a>
+                <a href="../playerstats.html">Your Stats</a>
+                <a href="#C3">Most Wins</a>
+                <a href="#C3">Most Losses</a>
+                <a href="#C3">Highest W/D</a>
+                <a href="#C3">Most Alliances Formed</a>
+                <a href="#C3">Most Alliances Broken</a>
+                <a href="#C3">Top Player Conquerer</a>
+                <a href="#C3">Most Land Captured</a>
+                <a href="#C3">Most Gold Earned</a>
+                <a href="#C3">Longest Playtime</a>
+                <a href="#C3">Most Ships Captured</a>
+                <a href="#C3">Most Cities Constructed</a>
+                <a href="#C3">Most Ports Established</a>
+                <a href="#C3">Most Defense Posts Built</a>
+                <a href="#C3">Most Missile Silos Constructed</a>
+                <a href="#C3">Most Warships Created</a>
+                <a href="#C3">Most Nuclear Strikes</a>
+            </div>
+            <button class="nav-button next">&#10095;</button>
+        </div>
+    </nav>
     <div class="container">
         <div class="section">
             <h2>Positive</h2>
@@ -178,5 +204,73 @@ if (searchBar) {
 } 
 
         </script>
+
+<script>
+    const scrollMenu = document.querySelector(".scrollmenu");
+    const prevButton = document.querySelector(".prev");
+    const nextButton = document.querySelector(".next");
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    let velocity = 0;
+    let momentumID;
+
+    function startDragging(e) {
+        isDown = true;
+        startX = e.pageX || e.touches[0].pageX;
+        scrollLeft = scrollMenu.scrollLeft;
+        velocity = 0;
+        cancelMomentumTracking();
+    }
+
+    function stopDragging() {
+        isDown = false;
+        beginMomentumTracking();
+    }
+
+    function moveDragging(e) {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX || e.touches[0].pageX;
+        const walk = (x - startX) * 1.5;
+        scrollMenu.scrollLeft = scrollLeft - walk;
+        velocity = (scrollMenu.scrollLeft - scrollLeft) * 0.2;
+    }
+
+    function beginMomentumTracking() {
+        cancelMomentumTracking();
+        momentumID = requestAnimationFrame(momentumLoop);
+    }
+
+    function cancelMomentumTracking() {
+        cancelAnimationFrame(momentumID);
+    }
+
+    function momentumLoop() {
+        scrollMenu.scrollLeft += velocity;
+        velocity *= 0.9;
+        if (Math.abs(velocity) > 0.1) {
+            momentumID = requestAnimationFrame(momentumLoop);
+        }
+    }
+
+    scrollMenu.addEventListener("mousedown", startDragging);
+    scrollMenu.addEventListener("mouseleave", stopDragging);
+    scrollMenu.addEventListener("mouseup", stopDragging);
+    scrollMenu.addEventListener("mousemove", moveDragging);
+
+    scrollMenu.addEventListener("touchstart", startDragging);
+    scrollMenu.addEventListener("touchend", stopDragging);
+    scrollMenu.addEventListener("touchmove", moveDragging);
+
+    prevButton.addEventListener("click", () => {
+        scrollMenu.scrollBy({ left: -200, behavior: 'smooth' });
+    });
+
+    nextButton.addEventListener("click", () => {
+        scrollMenu.scrollBy({ left: 200, behavior: 'smooth' });
+    });
+</script>
 </body>
 </html>
