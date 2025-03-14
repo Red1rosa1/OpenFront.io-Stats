@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <title>OpenFront.io Statistics System</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <h1>OpenFront.io Stats Dashboard</h1>
+    </header>
+    <nav>
+        <div class="header__search">
+            <form action="javascript:void(0);">
+                <input id="searchbar" onkeyup="searchStructures()" type="text" name="search" placeholder="Seach..." />
+                <button type="submit"><i class="material-icons">search</i></button>
+            </form>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="section">
+            <h2>Positive</h2>
+            <div class="structures">
+                <div class="structure-item">
+                    <img src="assets/images/icons/CrownIcon.png" alt="Crown">
+                    <h4>Total Wins</h4>
+                    <h2>174</h2>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/MushroomCloudIconWhite.svg" alt="MushroomCloud">
+                    <h4>Total Losses</h4>
+                    <h2>246</h2>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/AllianceIcon.png" alt="Alliance">
+                    <h4>Alliances Formed</h4>
+                    <h2>621</h2>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/TraitorIcon.png" alt="TraitorIcon">
+                    <h4>Alliances Broken</h4>
+                    <h2>348</h2>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/SwordIconWhite.png" alt="SwordIcon">
+                    <h4>Players Conquered</h4>
+                    <h2>1.8k</h2>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/TargetIcon.png" alt="TargetIcon">
+                    <h4>Total Land Captured</h4>
+                    <h2>900K km²</h2>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/GoldCoinIcon.svg" alt="GoldIcon">
+                    <h4>Gold Gained</h4>
+                    <h2>190.8M</h2>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/ClockIcon.png" alt="ClockIcon">
+                    <h4>Time Played</h4>
+                    <h2>8.4 Hour</h2>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/PercentageIcon.png" alt="PercentageIcon">
+                    <h4>Wins and Losses W/L Ratio</h4>
+                    <h2>0.71</h2>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/BoatIconWhite.png" alt="BoatIconWhite">
+                    <h4>Trading Ships Captured</h4>
+                    <h2>9K</h2>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/CityIconWhite.svg" alt="City">
+                    <h4>Cities Built</h4>
+                    <h2>875</h2>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/PortIcon.svg" alt="Port">
+                    <h4>Ports Built</h4>
+                    <h2>229</h2>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/ShieldIconWhite.svg" alt="Defense Post">
+                    <h4>Defense Posts Built</h4>
+                    <h2>1.3K</h2>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/MissileSiloIconWhite.svg" alt="Missile Silo">
+                    <h4>Missile Silos Built</h4>
+                    <h2>64</h2>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/DestroyerIconWhite.svg" alt="Warship">
+                    <h4>Warships Built</h4>
+                    <h2>179</h2>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/NukeIconWhite.svg" alt="Nukes">
+                    <h4>Nukes Sent</h4>
+                    <h2>114</h2>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Negative</h2>
+            <div class="structures">
+                <div class="structure-item">
+                    <img style="filter: sepia(1) saturate(3000%) hue-rotate(30deg) brightness(100%) contrast(100%);" src="assets/images/icons/CityIconWhite.svg" alt="City">
+                    <h4>Cities Lost</h4>
+                    <h2>1.04k</h2>
+                </div>
+                <div class="structure-item">
+                    <img style="filter: sepia(1) saturate(3000%) hue-rotate(30deg) brightness(100%) contrast(100%);" src="assets/images/icons/PortIcon.svg" alt="Port">
+                    <h4>Ports Lost</h4>
+                    <h2>233</h2>
+                </div>
+                <div class="structure-item">
+                    <img style="filter: sepia(1) saturate(3000%) hue-rotate(30deg) brightness(100%) contrast(100%);" src="assets/images/icons/ShieldIconWhite.svg" alt="Defense Post">
+                    <h4>Defense Posts Lost</h4>
+                    <h2>2k</h2>
+                </div>
+                <div class="structure-item">
+                    <img style="filter: sepia(1) saturate(3000%) hue-rotate(30deg) brightness(100%) contrast(100%);" src="assets/images/icons/MissileSiloIconWhite.svg" alt="Missile Silo">
+                    <h4>Missile Silos Lost</h4>
+                    <h2>74</h2>
+                </div>
+                <div class="structure-item">
+                    <img style="filter: sepia(1) saturate(3000%) hue-rotate(30deg) brightness(100%) contrast(100%);" src="assets/images/icons/DestroyerIconWhite.svg" alt="Warship">
+                    <h4>Warships Lost</h4>
+                    <h2>96</h2>
+                </div>
+                <div class="structure-item">
+                    <img style="filter: sepia(1) saturate(3000%) hue-rotate(30deg) brightness(100%) contrast(100%);" src="assets/images/icons/BoatIconWhite.png" alt="BoatIconWhite">
+                    <h4>Trading Ships Lost</h4>
+                    <h2>5K</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Footer Section -->
+        <footer class="footer">
+            <p>&copy; 2025 OpenFront.</p>
+            <p><a href="#">OpenFront.io</a> | <a href="#">Discord</a></p>
+        </footer>
+        <script>
+            function searchStructures() {
+    const searchValue = document.getElementById('searchbar').value.trim().toLowerCase();
+    const structureItems = document.querySelectorAll('.structure-item');
+    let resultsFound = false;
+
+    structureItems.forEach((item) => {
+        const title = item.querySelector('h4').innerText.toLowerCase();
+
+        // Check if the title matches the search value
+        if (title.includes(searchValue)) {
+            item.style.display = 'block';
+            resultsFound = true;
+        } else {
+            item.style.display = 'none';
+        }
+    });
+
+    // Show/hide "No results" message
+    const noResultsElement = document.getElementById('noResults');
+    if (noResultsElement) {
+        noResultsElement.style.display = resultsFound ? 'none' : 'block';
+    }
+} 
+
+// Optional: Add an event listener to trigger the search on input
+const searchBar = document.getElementById('searchbar');
+if (searchBar) {
+    searchBar.addEventListener('input', searchStructures);
+} 
+
+        </script>
+</body>
+</html>

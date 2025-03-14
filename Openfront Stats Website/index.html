@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/main.css">
+    <title>OpenFront.io Statistics System</title>
+</head>
+<body>
+    <header>
+        <h1>OpenFront.io Stats</h1>
+    </header>
+    <nav>
+        <div class="header__search">
+            <form action="javascript:void(0);">
+                <input id="searchbar" onkeyup="searchStructures()" type="text" name="search" placeholder="Seach..." />
+                <button type="submit"><i class="material-icons">search</i></button>
+            </form>
+        </div>
+    </nav>
+    <nav>
+        <div class="scroll-container">
+            <button class="nav-button prev">&#10094;</button>
+            <div class="scrollmenu">
+                <a href="index.html">Home</a>
+                <a href="playerstats.html">Your Stats</a>
+                <a href="#C3">Most Wins</a>
+                <a href="#C3">Most Losses</a>
+                <a href="#C3">Highest W/D</a>
+                <a href="#C3">Most Alliances Formed</a>
+                <a href="#C3">Most Alliances Broken</a>
+                <a href="#C3">Top Player Conquerer</a>
+                <a href="#C3">Most Land Captured</a>
+                <a href="#C3">Most Gold Earned</a>
+                <a href="#C3">Longest Playtime</a>
+                <a href="#C3">Most Ships Captured</a>
+                <a href="#C3">Most Cities Constructed</a>
+                <a href="#C3">Most Ports Established</a>
+                <a href="#C3">Most Defense Posts Built</a>
+                <a href="#C3">Most Missile Silos Constructed</a>
+                <a href="#C3">Most Warships Created</a>
+                <a href="#C3">Most Nuclear Strikes</a>
+            </div>
+            <button class="nav-button next">&#10095;</button>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="section">
+            <h2>Individual</h2>
+            <div class="structures">
+                <div class="structure-item">
+                    <a href="statspages/topwinsindividual.html">
+                    <img src="assets/images/icons/CrownIcon.png" alt="Crown">
+                    <h4>Most Wins</h4>
+                </a>
+                </div>
+                <div class="structure-item">
+                    <a href="statspages/topindividuallosses.html">
+                    <img src="assets/images/icons/MushroomCloudIconWhite.svg" alt="MushroomCloud">
+                    <h4>Most Losses</h4>
+                    </a>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/AllianceIcon.png" alt="Alliance">
+                    <h4>Most Alliances Formed</h4>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/TraitorIcon.png" alt="TraitorIcon">
+                    <h4>Most Alliances Broken</h4>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/SwordIconWhite.png" alt="SwordIcon">
+                    <h4>Most Players Conquered</h4>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/TargetIcon.png" alt="TargetIcon">
+                    <h4>Most Land Captured</h4>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/GoldCoinIcon.svg" alt="GoldIcon">
+                    <h4>Most Gold Gained</h4>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/ClockIcon.png" alt="ClockIcon">
+                    <h4>Most Time Played</h4>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/PercentageIcon.png" alt="PercentageIcon">
+                    <h4>Highest Wins and Losses W/L Ratio</h4>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/BoatIconWhite.png" alt="BoatIconWhite">
+                    <h4>Most Ships Captured</h4>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/CityIconWhite.svg" alt="City">
+                    <h4>Most Cities Built</h4>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/PortIcon.svg" alt="Port">
+                    <h4>Most Ports Built</h4>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/ShieldIconWhite.svg" alt="Defense Post">
+                    <h4>Most Defense Posts Built</h4>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/MissileSiloIconWhite.svg" alt="Missile Silo">
+                    <h4>Most Missile Silos Built</h4>
+                </div>
+                <div class="structure-item">
+                    <a href="statspages/topindivudualwarships.html">
+                    <img src="assets/images/icons/DestroyerIconWhite.svg" alt="Warship">
+                    <h4>Most Warships Built</h4>
+                </a>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/NukeIconWhite.svg" alt="Nukes">
+                    <h4>Most Nukes Sent</h4>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Clan's</h2>
+            <div class="structures">
+                <div class="structure-item">
+                    <a href="clanstats/mostwinsbyclan.html">
+                    <img src="assets/images/icons/CrownIcon.png" alt="Crown">
+                    <h4>Most Wins by Clan</h4>
+                    </a>
+                </div>
+                <div class="structure-item">
+                    <img style="filter: sepia(1) saturate(3000%) hue-rotate(30deg) brightness(100%) contrast(100%);" src="assets/images/icons/MushroomCloudIconWhite.svg" alt="MushroomCloud">
+                    <h4>Most Losses by Clan</h4>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/AllianceIcon.png" alt="Alliance">
+                    <h4>Most Alliances Formed by Clan</h4>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/TraitorIcon.png" alt="TraitorIcon">
+                    <h4>Most Alliances Broken by Clan</h4>
+                </div>
+                <div class="structure-item">
+                    <img style="filter: sepia(1) saturate(3000%) hue-rotate(30deg) brightness(100%) contrast(100%);" src="assets/images/icons/SwordIconWhite.png" alt="SwordIcon">
+                    <h4>Most Players Conquered by Clan</h4>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/TargetIcon.png" alt="TargetIcon">
+                    <h4>Most Land Captured by Clan</h4>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/GoldCoinIcon.svg" alt="GoldIcon">
+                    <h4>Most Gold Gained by Clan</h4>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/ClockIcon.png" alt="ClockIcon">
+                    <h4>Most Time Played by Clan</h4>
+                </div>
+                <div class="structure-item">
+                    <img src="assets/images/icons/PercentageIcon.png" alt="PercentageIcon">
+                    <h4>Highest Wins and Losses W/L Ratio by Clan</h4>
+                </div>
+                <div class="structure-item">
+                    <img style="filter: sepia(1) saturate(3000%) hue-rotate(30deg) brightness(100%) contrast(100%);" src="assets/images/icons/BoatIconWhite.png" alt="BoatIconWhite">
+                    <h4>Most Ships Captured</h4>
+                </div>
+                <div class="structure-item">
+                    <img style="filter: sepia(1) saturate(3000%) hue-rotate(30deg) brightness(100%) contrast(100%);" src="assets/images/icons/CityIconWhite.svg" alt="City">
+                    <h4>Most Cities Built by Clan</h4>
+                </div>
+                <div class="structure-item">
+                    <img style="filter: sepia(1) saturate(3000%) hue-rotate(30deg) brightness(100%) contrast(100%);" src="assets/images/icons/PortIcon.svg" alt="Port">
+                    <h4>Most Ports Built by Clan</h4>
+                </div>
+                <div class="structure-item">
+                    <img style="filter: sepia(1) saturate(3000%) hue-rotate(30deg) brightness(100%) contrast(100%);" src="assets/images/icons/ShieldIconWhite.svg" alt="Defense Post">
+                    <h4>Most Defense Posts Built by Clan</h4>
+                </div>
+                <div class="structure-item">
+                    <img style="filter: sepia(1) saturate(3000%) hue-rotate(30deg) brightness(100%) contrast(100%);" src="assets/images/icons/MissileSiloIconWhite.svg" alt="Missile Silo">
+                    <h4>Missile Silos Built by Clan</h4>
+                </div>
+                <div class="structure-item">
+                    <img style="filter: sepia(1) saturate(3000%) hue-rotate(30deg) brightness(100%) contrast(100%);" src="assets/images/icons/DestroyerIconWhite.svg" alt="Warship">
+                    <h4>Most Warships Built by Clan</h4>
+                </div>
+                <div class="structure-item">
+                    <img style="filter: sepia(1) saturate(3000%) hue-rotate(30deg) brightness(100%) contrast(100%);" src="assets/images/icons/NukeIconWhite.svg" alt="NukeIconWhite">
+                    <h4>Most Nukes Sent by Clan</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Footer Section -->
+        <footer class="footer">
+            <p>&copy; 2025 OpenFront.</p>
+            <p><a href="#">OpenFront.io</a> | <a href="#">Discord</a></p>
+        </footer>
+
+        <script>
+            function searchStructures() {
+    const searchValue = document.getElementById('searchbar').value.trim().toLowerCase();
+    const structureItems = document.querySelectorAll('.structure-item');
+    let resultsFound = false;
+
+    structureItems.forEach((item) => {
+        const title = item.querySelector('h4').innerText.toLowerCase();
+
+        // Check if the title matches the search value
+        if (title.includes(searchValue)) {
+            item.style.display = 'block';
+            resultsFound = true;
+        } else {
+            item.style.display = 'none';
+        }
+    });
+
+    // Show/hide "No results" message
+    const noResultsElement = document.getElementById('noResults');
+    if (noResultsElement) {
+        noResultsElement.style.display = resultsFound ? 'none' : 'block';
+    }
+} 
+
+// Optional: Add an event listener to trigger the search on input
+const searchBar = document.getElementById('searchbar');
+if (searchBar) {
+    searchBar.addEventListener('input', searchStructures);
+} 
+
+        </script>
+
+<script>
+    const scrollMenu = document.querySelector(".scrollmenu");
+    const prevButton = document.querySelector(".prev");
+    const nextButton = document.querySelector(".next");
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    let velocity = 0;
+    let momentumID;
+
+    function startDragging(e) {
+        isDown = true;
+        startX = e.pageX || e.touches[0].pageX;
+        scrollLeft = scrollMenu.scrollLeft;
+        velocity = 0;
+        cancelMomentumTracking();
+    }
+
+    function stopDragging() {
+        isDown = false;
+        beginMomentumTracking();
+    }
+
+    function moveDragging(e) {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX || e.touches[0].pageX;
+        const walk = (x - startX) * 1.5;
+        scrollMenu.scrollLeft = scrollLeft - walk;
+        velocity = (scrollMenu.scrollLeft - scrollLeft) * 0.2;
+    }
+
+    function beginMomentumTracking() {
+        cancelMomentumTracking();
+        momentumID = requestAnimationFrame(momentumLoop);
+    }
+
+    function cancelMomentumTracking() {
+        cancelAnimationFrame(momentumID);
+    }
+
+    function momentumLoop() {
+        scrollMenu.scrollLeft += velocity;
+        velocity *= 0.9;
+        if (Math.abs(velocity) > 0.1) {
+            momentumID = requestAnimationFrame(momentumLoop);
+        }
+    }
+
+    scrollMenu.addEventListener("mousedown", startDragging);
+    scrollMenu.addEventListener("mouseleave", stopDragging);
+    scrollMenu.addEventListener("mouseup", stopDragging);
+    scrollMenu.addEventListener("mousemove", moveDragging);
+
+    scrollMenu.addEventListener("touchstart", startDragging);
+    scrollMenu.addEventListener("touchend", stopDragging);
+    scrollMenu.addEventListener("touchmove", moveDragging);
+
+    prevButton.addEventListener("click", () => {
+        scrollMenu.scrollBy({ left: -200, behavior: 'smooth' });
+    });
+
+    nextButton.addEventListener("click", () => {
+        scrollMenu.scrollBy({ left: 200, behavior: 'smooth' });
+    });
+</script>
+</body>
+</html>
